@@ -1,12 +1,13 @@
 ---
 layout: post
-title: Getting more cozy with Pry
+title: Getting to know Pry
 ---
 
-Target audiance: Ruby begginer, someone with little or no experience using pry.
+*Target audiance:* Ruby begginer, someone with little to no experience using pry.
 
 Pry is a very powerful and feature rich REPL. This blog post will be an intro
-to pry as well as a primer to some of the features begginers should get comfortable with.
+to pry as well as a "prymer" to some of the features begginers should get
+comfortable with.(9)
 
 Index:
 
@@ -134,3 +135,4 @@ prying_hashes(hash)
 1. [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop)
 2. [IRB](https://en.wikipedia.org/wiki/Interactive_Ruby_Shell)
 3. [Turning IRB on its head with Pry](https://banisterfiend.wordpress.com/2011/01/27/turning-irb-on-its-head-with-pry/)
+9. Alex Griffith pun
