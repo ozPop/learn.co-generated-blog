@@ -3,17 +3,18 @@ layout: post
 title: Getting to know Pry
 ---
 
+A "prymer" to Pry.(4)
+
 *Target audiance:* Ruby begginer, someone with little to no experience using Pry.
 
-Pry is a very powerful and feature rich REPL. This blog post will be an intro
-to Pry as well as a "prymer" to some of the features begginers should strive to
-get comfortable with.(4)
+Pry is a powerful and feature rich REPL. This blog post is an intro to Pry as 
+well as to some of the features begginers should strive to get comfortable with.
 
 Index:
 
 * Description of REPL, IRB, and Pry
-* Examples of a couple common usecases
-* Access to documentation
+* Examples of binding.pry
+* How to access documentation in pry
 
 
 **What is REPL, IRB and PRY?**
@@ -55,17 +56,24 @@ tool for a ruby developer.
 
 **Useful Commands:**
 
+`pry` - launches a pry session
+
+`require "pry"` - used at the top of the file to import pry into the file
+
+`binding.pry`- used to stop execution and enter pry console
+
 `help` - list various keywords, aliases and commands with descriptions
 
-`exit` - in a loop moves up one iteration or to next binding.pry or exits Pry
+`exit` - in a loop, moves up one iteration or executes until next binding.pry 
+statement or exits Pry session
 
-`exit-program` or `exit!` or `!!!` - exits the program
+`exit-program` or `exit!` or `!!!` - exits the program immediately
 
 
 NOTE: Pry offers a lot of what IRB offers and quite a bit more. Arguably, one
 of the more powerful feartures of Pry is the **ability to stop a procedure during
-execution** and give yourself opportunity to debug or verify what is happening
-at that exact place in your code.
+execution**. This gives the user an opportunity to debug or verify what is happening
+at that exact place in the code.
 
 
 **Usecase examples**
