@@ -3,17 +3,16 @@ layout: post
 title: Getting to know Pry
 ---
 
-*Target audiance:* Ruby begginer, someone with little to no experience using pry.
+*Target audiance:* Ruby begginer, someone with little to no experience using Pry.
 
 Pry is a very powerful and feature rich REPL. This blog post will be an intro
-to pry as well as a "prymer" to some of the features begginers should get
-comfortable with.(9)
+to Pry as well as a "prymer" to some of the features begginers should strive to
+get comfortable with.(4)
 
 Index:
 
-* Description of REPL, IRB, and PRY
-* Example of common usecase, "prying" into a method
-* Modifying / Editing code from within PRY session
+* Description of REPL, IRB, and Pry
+* Examples of a couple common usecases
 * Access to documentation
 
 
@@ -25,17 +24,17 @@ Index:
 user to input expressions, which are then evaluated and displayed back to the
 user. The process is then repeated until program session is closed.(1)
 
-    REPL's serve many different programming languages however, they are in particular
+    REPL's serve many different programming languages, however they are particularly
 common with scripting languages.(1)
 
 * IRB comes packaged with ruby. It is a native REPL that any ruby user has
-access to. It allows for rappid experimentation in real-time and is especially
+access to. It allows for rapid experimentation in real-time and is especially
 popular with new ruby developers.(2)
 
     ![Example or irb](http://i.imgur.com/u0dDdsz.png)
 
-* [Pry](http://pryrepl.org/) is an alternative to irb. It packs a number of 
-exciting features that differentiate it from IRB and makes it a very useful
+* [Pry](http://pryrepl.org/) is an alternative to IRB. It packs a number of 
+exciting features that differentiate it from IRB and make it a very useful
 tool for a ruby developer.
 
     Some of the key features are:
@@ -49,29 +48,27 @@ tool for a ruby developer.
     * Run shell commands
     * Explore ruby ojects
 
-    But.., how else is it different from IRB?
-
-    One major difference is, an IRB user has to input code before that code
-    gets evaluated, in other words you deliver code to REPL session. Pry, unlike
-    IRB, creates a REPL session around your existing code.(3)
+    In IRB a user has to input code before that code gets evaluated, in other
+    words you deliver code to REPL session. Pry, unlike IRB, can create a REPL
+    session around your existing code.(3)
 
 
 **Useful Commands:**
 
 `help` - list various keywords, aliases and commands with descriptions
 
-e.g.: `exit` - while in a loop, moves up one iteration or to next binding.pry
+`exit` - in a loop moves up one iteration or to next binding.pry or exits Pry
 
-e.g.: `exit-program` or `exit!` or `!!!` - exits the program
+`exit-program` or `exit!` or `!!!` - exits the program
 
 
-NOTE: Pry offers a lot of what irb offers and quite a bit more. Arguably, one
-of the more useful feartures of pry is the ability to stop a procedure during
-execution and give yourself opportunity to debug or verify what is happening
+NOTE: Pry offers a lot of what IRB offers and quite a bit more. Arguably, one
+of the more powerful feartures of Pry is the **ability to stop a procedure during
+execution** and give yourself opportunity to debug or verify what is happening
 at that exact place in your code.
 
 
-**A common usecase example**
+**Usecase examples**
 
 -----
 
@@ -124,10 +121,37 @@ end
 prying_hashes(hash)
 ```
 
+![image title](http://i.imgur.com/i88w0MQ.png)
+
+The above image demonstrates how a user can navigate through a hash by typing
+`exit`, in the above case 3 times, at which point the user hits the next binding.pry
+statement.
+
 
 **Documetation from within pry**
 
 ----
+
+Another useful feature is examining documentation while in Pry. To do that,
+first install the required gem using `gem install pry-doc` command. While in Pry
+type `show-doc Class_name#method_name` which will display related documentation.
+A shortcut for show doc is `?` which results in `? Array#map!`.
+
+![image title](http://i.imgur.com/Ix40nyw.png)
+
+NOTE: 
+
+* `show-source Class_name#method_name` will return source code
+* `show-method method_name` is a good way to inspect your own methods
+
+**Conclusion**
+
+----
+
+This introductions just stracted the surface of what Pry can do for you as a
+ruby developer. I mentioned a number of features however, only covered a
+fraction of them. Look out for another blog entry in which I will cover other
+useful aspects of Pry.
 
 
 *Sources*
